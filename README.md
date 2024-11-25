@@ -6,18 +6,22 @@
  - dev : default 브랜치로 모든 개인 작업은 dev로 병합
  - indiv : 개별 작업 브랜치
 
-#### 2. 작업할 때 브랜치 흐름
+#### 2. 작업할 때 흐름
 
-모든 개인 작업은 개별 작업 브랜치에서 하고 병합은 dev로만 
+ - git clone 레포지토리 URL
+ - cd 레포지토리
 
- - git checkout dev - 브랜치 변경
- - git pull origin dev - dev 브랜치 내용 가져오기
- - git checkout -b indiv - 개별 브랜치 생성
+모든 개인 작업은 개별 작업 브랜치에서 하고 병합은 dev로만
+
+ - git checkout dev # 브랜치 변경
+ - git pull origin dev # dev 브랜치 내용 가져오기
+ - git checkout -b indiv # 개별 브랜치 생성
 
 개별 브랜치에서 작업을 끝내면
 
  - git add . 
- - git commit -m "작업 내용" - commit할 때 작업 내용 꼭 쓰기
+ - git commit -m "작업 내용" # commit할 때 작업 내용 꼭 쓰기
  - git push origin indiv
 
 그 후 GitHub에서 Pull Request 생성하고 dev에 병합
+
