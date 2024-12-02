@@ -38,7 +38,7 @@ def volumeAdjustment(input_audio,volume_persent):
 
 #울림소리를 위한 함수(오디오 세그멘트,울림간격,울림 횟수,감소되는 볼륨)
 #울림횟수는 10이하, 감소되는 볼륨은 70%이하만 사용가능
-#울림 횟수(reverb_count)만큼 반복해서 decreace_volume_smallnum데시벨씩 소리줄이기 -> input_audio에 붙이기 
+#울림 횟수(reverb_count)만큼 반복해서 decreace_volume_smallnum*100씩 소리줄이기 -> input_audio에 붙이기 
 def addReverb(input_audio,gapsecond=0.3,reverb_count=5,decreace_volume_persent=30):
 
     
