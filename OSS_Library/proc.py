@@ -35,8 +35,9 @@ def volumeAdjustment(input_audio,volume_persent):
     return adjusted_audio
 
 
-
+#스테레오를 모노로 변환하는 함수
 def StereoToMono(input_audio):
+    #입력된 오디오가 스테레오가 아닐 때
     if input_audio != 2:
         raise ValueError("입력된 오디오가 스테레오가 아닙니다.")
     else:
