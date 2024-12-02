@@ -33,4 +33,12 @@ def volumeAdjustment(input_audio,volume_persent):
         adjusted_audio=input_audio+volume_dB
 
     return adjusted_audio
-        
+
+
+
+def StereoToMono(input_audio):
+    if input_audio != 2:
+        raise ValueError("입력된 오디오가 스테레오가 아닙니다.")
+    else:
+        mono_audio = input_audio.set_channels(1)
+        return mono_audio
