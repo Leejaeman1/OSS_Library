@@ -95,14 +95,18 @@ def addReverb(input_audio,gapsecond=0.3,reverb_count=5,decreace_volume_persent=3
         input_audio=input_audio.overlay(volumeAdjustment(input_audio,decreace_volume_smallnum*100),(gapsecond*i)*1000)
     return input_audio
 
-
+#패닝 기능 함수 (오디오세그멘트, pan_percent(퍼센트))
+#음수는 왼쪽소리가 줄어들고 양수는 오른쪽소리가 줄어듦 (0은 그대로)
 def Panning(input_audio, pan_percent):
+    #AudioSegment클래스의 객체가 아닐때    
     if not isinstance(input_audio, AudioSegment):
         raise Exception("parameter 1, AudioSegment가 아닙니다.")
     
+    #pan_percent에 정수혹은 실수가 아닌것이 입력되었을때
     if not (isinstance(pan_percent,int) or isinstance(pan_percent,float)):
         raise Exception("parameter 2, 정수혹은 실수가 아닙니다.")
     
+    #pan_percent에 -100에서 100사이의 값으로 입력하지 않았을 때
     if not -100 <= pan_percent <= 100:
         raise ValueError("패닝 값을 -100에서 100사이로 입력해주세요")
 
