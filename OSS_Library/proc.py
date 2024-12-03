@@ -121,5 +121,6 @@ def Panning(input_audio, pan_percent):
         right = right -100
     elif pan_percent == 100:
         left = left -100
+        
     panned_audio = AudioSegment.from_mono_audiosegments(left, right)
     return panned_audio
