@@ -94,3 +94,19 @@ def addReverb(input_audio,gapsecond=0.3,reverb_count=5,decreace_volume_persent=3
         decreace_volume_smallnum=(decreace_volume_persent/100)**i
         input_audio=input_audio.overlay(volumeAdjustment(input_audio,decreace_volume_smallnum*100),(gapsecond*i)*1000)
     return input_audio
+
+
+def Panning(input_audio, pan_percent):
+    left, right = input_audio.split_to_mono
+    pan_value = pan_percent / 100
+
+    if -100 < pan_percent < 0:
+        right = right + 20 * math.log10(1 - abs(pan_value))
+    elif 0 < pan_percent < 100:
+        left = left + 20 * math.log10(1 - abs(pan_value))
+    elif pan_percent == -100:
+        right = right -100
+    elif pan_percent == 100:
+        left = left -100
+    panned_audio = AudioSegment.from_mono_audiosegments(left, right)
+    return panned_audio
