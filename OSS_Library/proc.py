@@ -96,7 +96,7 @@ def addReverb(input_audio,gapsecond=0.3,reverb_count=5,decreace_volume_persent=3
     return input_audio
 
 #패닝 기능 함수 (오디오세그멘트, pan_percent(퍼센트))
-#음수는 왼쪽소리가 줄어들고 양수는 오른쪽소리가 줄어듦 (0은 그대로)
+#음수는 왼쪽 소리가 줄어들고 양수는 오른쪽 소리가 줄어듦 (0은 그대로)
 def Panning(input_audio, pan_percent):
     #AudioSegment클래스의 객체가 아닐때    
     if not isinstance(input_audio, AudioSegment):
