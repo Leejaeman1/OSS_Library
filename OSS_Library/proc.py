@@ -35,6 +35,18 @@ def volumeAdjustment(input_audio,volume_persent):
     return adjusted_audio
 
 
+#스테레오를 모노로 변환하는 함수
+def StereoToMono(input_audio):
+    #AudioSegment클래스의 객체가 아닐 때
+    if not isinstance(input_audio, AudioSegment):
+        raise Exception("parameter 1, AudioSegment가 아닙니다.")
+    #입력된 오디오가 스테레오가 아닐 때
+    if input_audio != 2:
+        raise ValueError("입력된 오디오가 스테레오가 아닙니다.")
+    else:
+        mono_audio = input_audio.set_channels(1)
+        return mono_audio
+
 
 #울림소리를 위한 함수(오디오 세그멘트,울림간격,울림 횟수,감소되는 볼륨)
 #울림횟수는 10이하, 감소되는 볼륨은 70%이하만 사용가능
