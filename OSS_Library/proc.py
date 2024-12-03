@@ -97,6 +97,15 @@ def addReverb(input_audio,gapsecond=0.3,reverb_count=5,decreace_volume_persent=3
 
 
 def Panning(input_audio, pan_percent):
+    if not isinstance(input_audio, AudioSegment):
+        raise Exception("parameter 1, AudioSegment가 아닙니다.")
+    
+    if not (isinstance(pan_percent,int) or isinstance(pan_percent,float)):
+        raise Exception("parameter 2, 정수혹은 실수가 아닙니다.")
+    
+    if not -100 <= pan_percent <= 100:
+        raise ValueError("패닝 값을 -100에서 100사이로 입력해주세요")
+
     left, right = input_audio.split_to_mono
     pan_value = pan_percent / 100
 
