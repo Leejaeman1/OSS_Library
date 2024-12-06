@@ -41,7 +41,7 @@ def StereoToMono(input_audio):
     if not isinstance(input_audio, AudioSegment):
         raise TypeError("인자로 들어온 오디오가 AudioSegment가 아닙니다.")
     #입력된 오디오가 스테레오가 아닐 때
-    if input_audio != 2:
+    if input_audio.channels != 2:
         raise ValueError("입력된 오디오가 스테레오가 아닙니다.")
     else:
         mono_audio = input_audio.set_channels(1)
@@ -110,7 +110,7 @@ def Panning(input_audio, pan_percent):
     if not -100 <= pan_percent <= 100:
         raise ValueError("패닝 값이 범위에 적절하지 않은 값으로 입력되었습니다. (-100 ~ 100)")
 
-    left, right = input_audio.split_to_mono
+    left, right = input_audio.split_to_mono()
     pan_value = pan_percent / 100
 
     if -100 < pan_percent < 0:
