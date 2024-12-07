@@ -1,5 +1,49 @@
 ## OSS_Library
 
+### 개요
+OSS_Library는 오디오 데이터를 처리하기 위한 Python 라이브러리입니다. 이 라이브러리는 볼륨 조절, 리버브 추가, 스테레오-모노 변환, 팬닝 등의 기능을 제공합니다.
+
+---
+
+### 설치 방법
+
+#### 1. Python 버전
+
+이 프로젝트는 Python 3.12 에서 동작합니다.
+
+#### 2. FFmpeg 설치
+
+FFmpeg가 시스템에 설치되어 있어야 합니다:
+- Ubuntu/Debian: `sudo apt install ffmpeg`
+- Windows: [FFmpeg 설치 가이드](https://ffmpeg.org/download.html)
+
+#### 3. OSS_Library 설치
+
+bash
+
+ - pip install oss-library
+
+### 주요 기능
+
+ - 볼륨 조절 (volumeAdjustment)
+
+ - 리버브 추가 (addReverb)
+
+ - 스테레오 → 모노 변환 (StereoToMono)
+
+ - 팬닝 (Panning)
+
+### 디렉토리 구조
+
+### 테스트 방법
+
+ - `OSS_Library/test/test_library.py`에 구현
+
+ - python -m unittest discover -s test
+
+--------------------------------------------------------------------
+### 개발할 때
+
 ### 디렉토리는 재량껏 수정
 
 #### 1. branch 규칙
@@ -26,21 +70,3 @@
  - git push origin indiv
 
 그 후 GitHub에서 Pull Request 생성하고 dev에 병합
-
---------------------------------------------------------------------
-
-### 목적
-
- - 오디오 데이터를 처리하기 위한 라이브러리로 볼륨 조정, 팬닝, 리버브 효과 등을 지원.
-
-### 주요 기능
- 
-- volumeAdjustment : 오디오의 볼륨을 조정.
-- StereoToMono : 스테레오 오디오를 모노로 변환.
-- addReverb : 리버브 효과 추가.
-- Panning : 좌우 팬닝 효과 적용.
-
-### 디렉토리 구조
-
-- proc.py : 오디오 처리 관련 함수들.
-- tests/ : 테스트 코드 디렉토리.
