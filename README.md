@@ -79,5 +79,11 @@ OSS_Library/
  - git add . 
  - git commit -m "작업 내용"   # commit할 때 작업 내용 꼭 쓰기
  - git push origin indiv
-
+ 
+=======
 그 후 GitHub에서 Pull Request 생성하고 dev에 병합
+
+이슈 작성 규칙 
+1.제목: 간단하고 명확하게 제목 작성해주세요 
+2.설명: 문제 상황, 발생한 오류, 해결 방법 등을 구체적으로 작성해주세요
+3.해결 완료된 이슈는 Closed로 상태 변경해주시길 바랍니다.
