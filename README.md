@@ -21,7 +21,8 @@ FFmpeg가 시스템에 설치되어 있어야 합니다:
 
 bash
 
- - pip install oss-library
+ - OSS_Library에 들어가서
+ - pip install dist/OSS_Library-1.0.0.tar.gz
 
 ### 주요 기능
 
