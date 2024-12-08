@@ -37,14 +37,23 @@ bash
 ### 디렉토리 구조
 
 OSS_Library/
+
 ├── OSS_Library/         # 라이브러리 코드
+
 │   ├── __init__.py
+
 │   └── proc.py          # 라이브러리 함수
+
 ├── test/                # 테스트 코드
+
 │   └── test_library.py
+
 ├── .gitignore           # 빌드 파일 (dist/) 등을 불필요한 파일이 git 저장소에서 제외되도록 함
+
 ├── setup.py             # 패키지 설정 파일
+
 ├── README.md            # 라이브러리 설명 파일
+
 └── MANIFEST.in          # 추가 파일 포함 설정
 
 ### 테스트 방법
