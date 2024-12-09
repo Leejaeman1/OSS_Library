@@ -1,8 +1,7 @@
-# README 파일 포함
-include README.md
+include README.rst
 
-# 라이선스 파일 포함
 include LICENSE
 
-# 테스트 데이터 포함
 include test/*.py
+
+recursive-include docs *
