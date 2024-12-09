@@ -32,7 +32,6 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 extensions = [
-    'sphinx.ext.autodoc',       
-    'sphinx.ext.viewcode'
+    'sphinx.ext.autodoc'
 ]
 
