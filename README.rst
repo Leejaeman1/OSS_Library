@@ -224,15 +224,24 @@ overlay
 
 OSS_Library/
 ├── OSS_Library/              # 라이브러리 소스 코드
+
 │   ├── __init__.py           # 패키지 초기화 파일
+
 │   ├── proc.py               # 주요 라이브러리 함수 (볼륨 조절, 리버브 등)
+
 ├── test/                # 테스트 코드
+
 │   └── test_library.py
 ├── .gitignore           # 빌드 파일 (dist/) 등을 불필요한 파일이 git 저장소에서 제외되도록 함
+
 ├── LICENSE                   # MIT 라이선스 파일
+
 ├── README.rst                # 프로젝트 설명 (PyPI와 Read the Docs 공유)
+
 ├── pyproject.toml            # 패키지 설정 파일
+
 ├── MANIFEST.in               # 패키징에 포함할 추가 파일 설정
+
 └── .readthedocs.yaml         # Read the Docs 설정 파일
 
 ---
