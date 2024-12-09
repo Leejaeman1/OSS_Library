@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "OSS_Library"
+version = "1.0.0"
+description = "A library for audio processing"
+readme = "README.rst"
+license = {text = "MIT"}
+authors = [
+  {name = "Leejaeman1"}
+]
+dependencies = [
+  "pydub>=0.25.1",\
+  "ffmpeg-python>=0.2.0"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Documentation = "https://OSS_Library.readthedocs.io"
+Source = "https://github.com/Leejaeman1/OSS_Library"
+Tracker = "https://github.com/Leejaeman1/OSS_Library/issues"
