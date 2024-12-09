@@ -3,5 +3,3 @@ include README.rst
 include LICENSE
 
 include test/*.py
-
-recursive-include docs *
