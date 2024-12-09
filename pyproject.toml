@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools", "wheel","sphinx"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -12,8 +12,8 @@ authors = [
   {name = "Leejaeman1"}
 ]
 dependencies = [
-  "pydub>=0.25.1",\
-  "ffmpeg-python>=0.2.0"
+  "pydub>=0.25.1",
+  "ffmpeg-python>=0.2.0",
 ]
 classifiers = [
   "Programming Language :: Python :: 3",
